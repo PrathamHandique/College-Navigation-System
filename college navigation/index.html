@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet' />
+
+  <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.css"
+    type="text/css"
+  />
+
+  <title>Srm Navigation</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden; 
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .full-screen-video-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1; 
+    }
+
+    video {
+      object-fit: cover; 
+      filter: brightness(80%); 
+    }
+
+    #introduction {
+      text-align: center;
+      font-size: 44px;
+      margin-top: -10vh; 
+      color: rgb(255, 255, 255);
+      font-family: 'Brush Script', cursive;
+    }
+
+    #map {
+      height: 60vh; 
+      width: 90vw;
+      background-color: rgba(255, 255, 255, 0.8); 
+    }
+  </style>
+  <script src="script.js" defer ></script>
+</head>
+<body>
+  <div class="full-screen-video-container">
+    <video autoplay loop muted>
+      <source src="bg.mp4" type="video/mp4" />
+    </video>
+  </div>
+  <div id='introduction'>
+    <p>Welcome to SRM College Navigation</p>
+  </div>
+  <div id='map'></div>
+</body>
+</html>
